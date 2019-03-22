@@ -1,19 +1,24 @@
 Composite
+=======
+
 
 Composite lets clients treat individual objects and compositions of objects uniformly. The Composite pattern can represent both the conditions. In this pattern, one can develop tree structures for representing part-whole hierarchies.
 
 
 
-1. Applicability
+## 1. Applicability
 Use the Composite pattern when 
     - you want to represent part-whole hieranchies of objects.
     - you want clients to be able to ignore the different between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly.
 
-2. Structure 
+## 2. Structure 
+
+![](https://github.com/mxhoa/Software-Design-Patterns/blob/master/assets/structural_assets/Composite_structure_1.PNG)
 
 A typical Composite object structure might look like this:
+![](https://github.com/mxhoa/Software-Design-Patterns/blob/master/assets/structural_assets/Composite_structure_2.PNG)
 
-3. Participants
+## 3. Participants
 - Component
     + declares the interface for objects in the composition.
     + implements default behavior for the interface common to all classes, as appropriate.
@@ -32,5 +37,5 @@ A typical Composite object structure might look like this:
 - Client
     + manipulates objects in the composition through the Component interface.
 
-4. Collaborations
+## 4. Collaborations
 - Clients use the Component class interface to interact with objects in the composite structure. If the recipient is a Leaf, then the request is handled directly. If the recipient is a Composite, the it usally forwards requests to its child components, possibly performing additional operations before and/or after forwarding.
